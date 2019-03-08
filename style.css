@@ -1,0 +1,102 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+  margin: auto;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+}
+
+.bar span {
+  width: 60px;
+  padding-right: 5px;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  background: rgba(200, 200, 250, 0.4);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+}
+
+.control button {
+  height: 60px;
+  width: 60px;
+  margin: 4px;
+}
+
+.pie_container {
+  position: relative;
+  height: 400px;
+  width: 400px;
+}
+
+.pie_container::after {
+  position: absolute;
+  content: '◀';
+  font-size: 60px;
+  top: 150px;
+  right: -40px;
+}
+
+.pie_background {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /* overflow: hidden; */
+  /* animation: rote 10s linear infinite; */
+}
+
+.pie_unit {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 1000%;
+  clip: rect(0px, 400px, 400px, 200px);
+}
+
+.pie {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 100%;
+  /* background: rgba(100, 50, 50, 0.2); */
+  clip: rect(0px, 200px, 400px, 0px);
+  /* transform: rotate(30deg); */
+}
+
+@keyframes rote {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
